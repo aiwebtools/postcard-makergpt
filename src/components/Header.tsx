@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, MessageSquare, HelpCircle, Shield, Tool } from "lucide-react";
 import Logo from "./Logo";
 import { Button } from "@/components/ui/button";
 
@@ -37,37 +37,46 @@ const Header: React.FC = () => {
           <Logo />
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-6">
-            <a
-              href="https://chatgpt.com/g/g-6814dcbdbc548191ad602de22e072917-postcard-maker-gpt"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-medium text-white hover:text-cyber-neon-cyan transition-colors"
+          <nav className="hidden md:flex items-center gap-4">
+            <Button
+              variant="ghost"
+              size="sm"
+              className="text-white hover:text-cyber-neon-cyan hover:bg-cyber-neon-blue/10 transition-colors font-medium"
+              onClick={() => window.open("https://chatgpt.com/g/g-6814dcbdbc548191ad602de22e072917-postcard-maker-gpt", "_blank")}
             >
+              <MessageSquare className="mr-2 h-4 w-4" />
               USE Postcard Maker GPT
-            </a>
-            <a
-              href="#faq"
-              className="font-medium text-white hover:text-cyber-neon-cyan transition-colors"
+            </Button>
+            <Button
+              variant="ghost"
+              size="sm" 
+              className="text-white hover:text-cyber-neon-cyan hover:bg-cyber-neon-blue/10 transition-colors font-medium"
+              onClick={() => document.getElementById('faq')?.scrollIntoView({behavior: 'smooth'})}
             >
+              <HelpCircle className="mr-2 h-4 w-4" />
               FAQ
-            </a>
-            <a
-              href="#disclaimer"
-              className="font-medium text-white hover:text-cyber-neon-cyan transition-colors"
+            </Button>
+            <Button
+              variant="ghost"
+              size="sm"
+              className="text-white hover:text-cyber-neon-cyan hover:bg-cyber-neon-blue/10 transition-colors font-medium"
+              onClick={() => document.getElementById('disclaimer')?.scrollIntoView({behavior: 'smooth'})}
             >
+              <Shield className="mr-2 h-4 w-4" />
               Disclaimer
-            </a>
-            <a
-              href="https://www.aiwebtools.ai"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-medium text-white hover:text-cyber-neon-cyan transition-colors"
+            </Button>
+            <Button
+              variant="ghost"
+              size="sm"
+              className="text-white hover:text-cyber-neon-cyan hover:bg-cyber-neon-blue/10 transition-colors font-medium"
+              onClick={() => window.open("https://www.aiwebtools.ai", "_blank")}
             >
+              <Tool className="mr-2 h-4 w-4" />
               More AI Tools
-            </a>
+            </Button>
             <Button 
-              className="cyber-button border-cyber-neon-cyan text-cyber-neon-cyan hover:text-white"
+              size="sm"
+              className="ml-2 cyber-button bg-gradient-to-r from-cyber-neon-blue to-cyber-neon-cyan border-none text-white hover:text-white"
               onClick={() => window.open("https://chatgpt.com/g/g-6814dcbdbc548191ad602de22e072917-postcard-maker-gpt", "_blank")}
             >
               Try Now
@@ -85,39 +94,53 @@ const Header: React.FC = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <nav className="md:hidden py-4 flex flex-col gap-4 animate-fade-in">
-            <a
-              href="https://chatgpt.com/g/g-6814dcbdbc548191ad602de22e072917-postcard-maker-gpt"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-medium text-white hover:text-cyber-neon-cyan transition-colors py-2"
+          <nav className="md:hidden py-4 flex flex-col gap-3 animate-fade-in">
+            <Button
+              variant="ghost"
+              className="justify-start text-white hover:text-cyber-neon-cyan hover:bg-cyber-neon-blue/10"
+              onClick={() => {
+                window.open("https://chatgpt.com/g/g-6814dcbdbc548191ad602de22e072917-postcard-maker-gpt", "_blank");
+                setIsMobileMenuOpen(false);
+              }}
             >
+              <MessageSquare className="mr-2 h-4 w-4" />
               USE Postcard Maker GPT
-            </a>
-            <a
-              href="#faq"
-              className="font-medium text-white hover:text-cyber-neon-cyan transition-colors py-2"
-              onClick={() => setIsMobileMenuOpen(false)}
+            </Button>
+            <Button
+              variant="ghost"
+              className="justify-start text-white hover:text-cyber-neon-cyan hover:bg-cyber-neon-blue/10"
+              onClick={() => {
+                document.getElementById('faq')?.scrollIntoView({behavior: 'smooth'});
+                setIsMobileMenuOpen(false);
+              }}
             >
+              <HelpCircle className="mr-2 h-4 w-4" />
               FAQ
-            </a>
-            <a
-              href="#disclaimer"
-              className="font-medium text-white hover:text-cyber-neon-cyan transition-colors py-2"
-              onClick={() => setIsMobileMenuOpen(false)}
+            </Button>
+            <Button
+              variant="ghost"
+              className="justify-start text-white hover:text-cyber-neon-cyan hover:bg-cyber-neon-blue/10"
+              onClick={() => {
+                document.getElementById('disclaimer')?.scrollIntoView({behavior: 'smooth'});
+                setIsMobileMenuOpen(false);
+              }}
             >
+              <Shield className="mr-2 h-4 w-4" />
               Disclaimer
-            </a>
-            <a
-              href="https://www.aiwebtools.ai"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-medium text-white hover:text-cyber-neon-cyan transition-colors py-2"
+            </Button>
+            <Button
+              variant="ghost"
+              className="justify-start text-white hover:text-cyber-neon-cyan hover:bg-cyber-neon-blue/10"
+              onClick={() => {
+                window.open("https://www.aiwebtools.ai", "_blank");
+                setIsMobileMenuOpen(false);
+              }}
             >
+              <Tool className="mr-2 h-4 w-4" />
               More AI Tools
-            </a>
+            </Button>
             <Button 
-              className="cyber-button border-cyber-neon-cyan text-cyber-neon-cyan hover:text-white w-full"
+              className="mt-2 cyber-button bg-gradient-to-r from-cyber-neon-blue to-cyber-neon-cyan border-none text-white hover:text-white w-full"
               onClick={() => window.open("https://chatgpt.com/g/g-6814dcbdbc548191ad602de22e072917-postcard-maker-gpt", "_blank")}
             >
               Try Now
