@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, MessageSquare, HelpCircle, Shield, Tool } from "lucide-react";
+import { Menu, X, MessageSquare, HelpCircle, Shield, Wrench } from "lucide-react";
 import Logo from "./Logo";
 import { Button } from "@/components/ui/button";
 
@@ -71,7 +71,7 @@ const Header: React.FC = () => {
               className="text-white hover:text-cyber-neon-cyan hover:bg-cyber-neon-blue/10 transition-colors font-medium"
               onClick={() => window.open("https://www.aiwebtools.ai", "_blank")}
             >
-              <Tool className="mr-2 h-4 w-4" />
+              <Wrench className="mr-2 h-4 w-4" />
               More AI Tools
             </Button>
             <Button 
@@ -136,7 +136,7 @@ const Header: React.FC = () => {
                 setIsMobileMenuOpen(false);
               }}
             >
-              <Tool className="mr-2 h-4 w-4" />
+              <Wrench className="mr-2 h-4 w-4" />
               More AI Tools
             </Button>
             <Button 
