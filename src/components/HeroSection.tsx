@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 const HeroSection: React.FC = () => {
   return (
-    <div className="relative min-h-[100vh] flex flex-col items-center justify-center pt-20 pb-12 divine-section overflow-hidden">
+    <div className="relative min-h-screen flex flex-col items-center justify-center pt-32 pb-20 divine-section overflow-hidden">
       {/* Divine Animated Background Elements */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute top-1/4 left-1/6 w-96 h-96 bg-gradient-to-r from-cyber-neon-cyan/10 to-cyber-neon-blue/10 rounded-full filter blur-[120px] animate-divine-wave"></div>
@@ -13,27 +13,27 @@ const HeroSection: React.FC = () => {
         <div className="absolute top-1/6 left-1/2 w-64 h-64 bg-gradient-to-r from-cyber-neon-divine/15 to-cyber-neon-holy/10 rounded-full filter blur-[80px] animate-divine-pulse"></div>
       </div>
       
-      <div className="divine-container z-10">
-        <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-20">
-          <div className="lg:w-1/2 space-y-10 text-center lg:text-left">
-            <div className="space-y-6">
+      <div className="divine-container z-10 w-full">
+        <div className="flex flex-col lg:flex-row items-center gap-20 lg:gap-24">
+          <div className="lg:w-1/2 space-y-12 text-center lg:text-left">
+            <div className="space-y-8">
               <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-cyber font-black leading-tight">
-                <span className="cyber-gradient-text animate-divine-glow divine-shimmer">Postcard Maker</span>{" "}
-                <span className="text-white cyber-text">GPT</span>
+                <span className="cyber-gradient-text animate-divine-glow divine-shimmer block mb-4">Postcard Maker</span>
+                <span className="text-white cyber-text block text-6xl md:text-7xl lg:text-8xl xl:text-9xl">GPT</span>
               </h1>
-              <h2 className="text-xl md:text-2xl lg:text-3xl font-cyber text-cyber-text-secondary divine-glow-text font-semibold tracking-wide">
+              <h2 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-cyber text-cyber-text-secondary divine-glow-text font-semibold tracking-wide leading-relaxed">
                 CREATE READY TO MAIL POSTCARD DESIGNS WITH THE POWER OF AI
               </h2>
             </div>
             
-            <p className="text-cyber-text-secondary max-w-2xl text-lg md:text-xl leading-relaxed">
+            <p className="text-cyber-text-secondary max-w-2xl text-lg md:text-xl xl:text-2xl leading-relaxed">
               Generate hyperrealistic, print-ready promotional postcards instantly. Our AI creates perfect 16:9 aspect ratio images for both front and back sides, following precise layout rules for professional marketing materials.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start pt-4">
+            <div className="flex flex-col sm:flex-row gap-8 justify-center lg:justify-start pt-6">
               <Button 
                 size="lg"
-                className="cyber-button border-cyber-neon-cyan text-cyber-neon-cyan hover:text-white text-lg px-8 py-4 font-bold animate-divine-pulse"
+                className="cyber-button border-cyber-neon-cyan text-cyber-neon-cyan hover:text-white text-xl px-10 py-6 font-bold animate-divine-pulse"
                 onClick={() => window.open("https://chatgpt.com/g/g-6814dcbdbc548191ad602de22e072917-postcard-maker-gpt", "_blank")}
               >
                 Try Now Free
@@ -41,14 +41,14 @@ const HeroSection: React.FC = () => {
               <Button 
                 variant="outline" 
                 size="lg"
-                className="cyber-button border-cyber-neon-purple text-cyber-neon-purple hover:text-white text-lg px-8 py-4 font-bold"
+                className="cyber-button border-cyber-neon-purple text-cyber-neon-purple hover:text-white text-xl px-10 py-6 font-bold"
                 onClick={() => document.getElementById("how-it-works")?.scrollIntoView({ behavior: "smooth" })}
               >
                 Learn How It Works
               </Button>
             </div>
             
-            <div className="pt-6 text-cyber-text-muted text-base md:text-lg">
+            <div className="pt-8 text-cyber-text-muted text-lg md:text-xl">
               No login required. Powered by OpenAI's GPT technology.
             </div>
           </div>
