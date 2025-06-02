@@ -1,3 +1,4 @@
+
 import React from "react";
 import Logo from "./Logo";
 import { Button } from "@/components/ui/button";
@@ -13,11 +14,6 @@ const Footer: React.FC = () => {
             <p className="text-cyber-text-muted max-w-md">
               Create ready to mail postcard designs with the power of AI. Generate hyperrealistic, print-ready promotional postcards with precise formatting for your marketing needs.
             </p>
-            <div className="bg-cyber-darker/60 border border-amber-400/30 rounded-lg p-3 max-w-md">
-              <p className="text-amber-300 text-xs">
-                <strong>Disclaimer:</strong> This tool is provided for informational, educational, and research purposes only. Results may vary and professional review is recommended.
-              </p>
-            </div>
             <div className="flex flex-col gap-2">
               <a 
                 href="tel:+14758008096"
@@ -60,7 +56,7 @@ const Footer: React.FC = () => {
                 Privacy Policy
               </a>
               <a 
-                href="https://aiwebtools.lovable.app/disclaimers"
+                href="https://aiwebtools.ai/terms-of-services"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-cyber-text-muted hover:text-cyber-neon-cyan transition-colors"
