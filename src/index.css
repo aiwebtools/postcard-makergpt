@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -7,13 +7,13 @@
 
 @layer base {
   :root {
-    --background: 225 20% 13%;
+    --background: 225 20% 8%;
     --foreground: 0 0% 100%;
 
-    --card: 230 20% 15%;
+    --card: 230 20% 12%;
     --card-foreground: 0 0% 100%;
 
-    --popover: 230 20% 15%;
+    --popover: 230 20% 12%;
     --popover-foreground: 0 0% 100%;
 
     --primary: 186 100% 50%;
@@ -22,8 +22,8 @@
     --secondary: 300 100% 50%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 225 10% 25%;
-    --muted-foreground: 0 0% 80%;
+    --muted: 225 10% 20%;
+    --muted-foreground: 0 0% 85%;
 
     --accent: 270 75% 64%;
     --accent-foreground: 0 0% 100%;
@@ -31,8 +31,8 @@
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 225 20% 30%;
-    --input: 225 20% 30%;
+    --border: 225 20% 25%;
+    --input: 225 20% 25%;
     --ring: 186 100% 50%;
 
     --radius: 0.5rem;
@@ -43,94 +43,282 @@
   }
 
   body {
-    @apply bg-cyber-dark text-cyber-text-primary;
-    background-image: linear-gradient(to bottom, rgba(26, 31, 44, 0.97), rgba(26, 31, 44, 0.97)), 
-                      var(--cyber-grid-bg);
+    @apply bg-cyber-divine text-cyber-text-primary;
+    background: 
+      radial-gradient(circle at 20% 50%, rgba(0, 255, 255, 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(255, 0, 255, 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 40% 80%, rgba(138, 43, 226, 0.1) 0%, transparent 50%),
+      linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 25%, #16213e 50%, #0f0f0f 100%),
+      var(--divine-particles);
     background-attachment: fixed;
+    background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%, 50px 50px;
+    animation: divine-background-shift 20s ease-in-out infinite, divine-particles-float 8s linear infinite;
+    overflow-x: hidden;
   }
 
-  /* Custom scrollbar */
+  /* Divine scrollbar */
   ::-webkit-scrollbar {
-    width: 8px;
+    width: 12px;
   }
 
   ::-webkit-scrollbar-track {
-    background: #121212;
+    background: linear-gradient(45deg, #0a0a0f, #1a1a2e);
+    border-radius: 6px;
   }
   
   ::-webkit-scrollbar-thumb {
-    background: #1EAEDB;
-    border-radius: 4px;
+    background: linear-gradient(45deg, #00ffff, #ff00ff, #8a2be2);
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    animation: divine-glow-pulse 2s ease-in-out infinite;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: #00FFFF;
+    background: linear-gradient(45deg, #ff00ff, #00ffff, #8a2be2);
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.8);
   }
 
-  /* Cyberpunk-specific classes */
+  /* Divine Cyberpunk Classes */
   .cyber-border {
-    @apply relative border border-cyan-400/50 rounded-md overflow-hidden;
-    box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+    @apply relative border-2 border-transparent rounded-lg overflow-hidden;
+    background: linear-gradient(45deg, rgba(0, 255, 255, 0.3), rgba(255, 0, 255, 0.3), rgba(138, 43, 226, 0.3)) border-box;
+    box-shadow: 
+      0 0 20px rgba(0, 255, 255, 0.4),
+      0 0 40px rgba(255, 0, 255, 0.2),
+      inset 0 0 20px rgba(138, 43, 226, 0.1);
+    animation: divine-border-pulse 3s ease-in-out infinite;
   }
 
   .cyber-border::before {
     content: '';
     @apply absolute inset-0 pointer-events-none;
-    background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.2), transparent);
-    animation: cyber-border-glow 1.5s linear infinite;
+    background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.6), rgba(255, 0, 255, 0.6), transparent);
+    animation: divine-border-sweep 2s linear infinite;
   }
 
   .cyber-text {
     @apply font-cyber;
-    text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
+    text-shadow: 
+      0 0 10px rgba(0, 255, 255, 0.8),
+      0 0 20px rgba(255, 0, 255, 0.6),
+      0 0 30px rgba(138, 43, 226, 0.4);
+    animation: divine-text-glow 4s ease-in-out infinite;
   }
 
   .cyber-gradient-text {
-    @apply bg-gradient-to-r from-cyber-neon-cyan via-cyber-neon-blue to-cyber-neon-purple text-transparent bg-clip-text font-bold;
+    @apply bg-gradient-to-r from-cyan-300 via-purple-400 to-pink-300 text-transparent bg-clip-text font-bold;
+    background-size: 200% 200%;
+    animation: divine-gradient-shift 3s ease-in-out infinite;
   }
 
   .cyber-card {
-    @apply relative bg-cyber-darker/60 rounded-lg backdrop-blur-sm border border-cyber-neon-blue/20 overflow-hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3), 0 0 10px rgba(30, 174, 219, 0.2);
+    @apply relative rounded-xl backdrop-blur-md border border-transparent overflow-hidden;
+    background: 
+      linear-gradient(rgba(10, 10, 15, 0.85), rgba(26, 26, 46, 0.85)) padding-box,
+      linear-gradient(135deg, rgba(0, 255, 255, 0.4), rgba(255, 0, 255, 0.4), rgba(138, 43, 226, 0.4)) border-box;
+    box-shadow: 
+      0 8px 32px rgba(0, 0, 0, 0.5),
+      0 0 30px rgba(0, 255, 255, 0.2),
+      0 0 60px rgba(255, 0, 255, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    animation: divine-card-float 6s ease-in-out infinite;
+  }
+
+  .cyber-card::before {
+    content: '';
+    @apply absolute inset-0 pointer-events-none;
+    background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), rgba(0, 255, 255, 0.1) 0%, transparent 50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .cyber-card:hover::before {
+    opacity: 1;
+    animation: divine-ripple 0.8s ease-out;
   }
 
   .cyber-button {
-    @apply relative overflow-hidden font-cyber font-medium rounded-md transition-all duration-300 border;
-    background: linear-gradient(90deg, #1A1F2C, #121212);
-    box-shadow: 0 0 5px rgba(0, 255, 255, 0.2);
+    @apply relative overflow-hidden font-cyber font-medium rounded-lg transition-all duration-300 border-2 border-transparent;
+    background: 
+      linear-gradient(135deg, rgba(26, 31, 44, 0.9), rgba(18, 18, 18, 0.9)) padding-box,
+      linear-gradient(45deg, rgba(0, 255, 255, 0.6), rgba(255, 0, 255, 0.6)) border-box;
+    box-shadow: 
+      0 4px 15px rgba(0, 0, 0, 0.3),
+      0 0 20px rgba(0, 255, 255, 0.3);
+    transform-style: preserve-3d;
   }
 
   .cyber-button::before {
     content: '';
-    @apply absolute inset-0 opacity-0 transition-opacity duration-300;
-    background: linear-gradient(90deg, rgba(0, 255, 255, 0.1), rgba(255, 0, 255, 0.1));
+    @apply absolute inset-0 opacity-0 transition-all duration-300;
+    background: linear-gradient(45deg, rgba(0, 255, 255, 0.2), rgba(255, 0, 255, 0.2), rgba(138, 43, 226, 0.2));
+    transform: translateZ(-1px);
+  }
+
+  .cyber-button::after {
+    content: '';
+    @apply absolute inset-0 opacity-0;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
+    animation: divine-button-shine 2s ease-in-out infinite;
+  }
+
+  .cyber-button:hover {
+    @apply transform scale-105;
+    box-shadow: 
+      0 8px 25px rgba(0, 0, 0, 0.4),
+      0 0 40px rgba(0, 255, 255, 0.6),
+      0 0 80px rgba(255, 0, 255, 0.4);
+    animation: divine-button-pulse 0.6s ease-out;
   }
 
   .cyber-button:hover::before {
     @apply opacity-100;
   }
 
-  .cyber-button:hover {
-    @apply transform scale-105;
-    box-shadow: 0 0 10px rgba(0, 255, 255, 0.4), 0 0 20px rgba(0, 255, 255, 0.2);
+  .cyber-button:hover::after {
+    opacity: 1;
   }
 
   .cyber-input {
-    @apply bg-cyber-darker/60 border border-cyber-neon-blue/30 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-cyber-neon-cyan/50 transition-all;
-    box-shadow: 0 0 5px rgba(0, 255, 255, 0.1) inset;
+    @apply backdrop-blur-md border-2 border-transparent rounded-lg px-4 py-3 focus:outline-none transition-all duration-300;
+    background: 
+      linear-gradient(rgba(26, 31, 44, 0.8), rgba(18, 18, 18, 0.8)) padding-box,
+      linear-gradient(45deg, rgba(0, 255, 255, 0.3), rgba(255, 0, 255, 0.3)) border-box;
+    box-shadow: 
+      0 4px 15px rgba(0, 0, 0, 0.2),
+      inset 0 0 20px rgba(0, 255, 255, 0.1);
   }
 
-  @keyframes cyber-border-glow {
-    0% {
-      transform: translateX(-100%);
+  .cyber-input:focus {
+    box-shadow: 
+      0 4px 20px rgba(0, 0, 0, 0.3),
+      0 0 30px rgba(0, 255, 255, 0.5),
+      inset 0 0 30px rgba(255, 0, 255, 0.1);
+    animation: divine-input-glow 0.3s ease-out;
+  }
+
+  /* Divine Animations */
+  @keyframes divine-background-shift {
+    0%, 100% { background-position: 0% 0%, 100% 0%, 0% 100%, 0% 0%, 0% 0%; }
+    25% { background-position: 100% 100%, 0% 100%, 100% 0%, 0% 0%, 25% 25%; }
+    50% { background-position: 0% 100%, 100% 0%, 0% 0%, 0% 0%, 50% 50%; }
+    75% { background-position: 100% 0%, 0% 0%, 100% 100%, 0% 0%, 75% 75%; }
+  }
+
+  @keyframes divine-particles-float {
+    0%, 100% { background-position: 0 0; }
+    50% { background-position: 50px 50px; }
+  }
+
+  @keyframes divine-border-pulse {
+    0%, 100% { 
+      box-shadow: 
+        0 0 20px rgba(0, 255, 255, 0.4),
+        0 0 40px rgba(255, 0, 255, 0.2),
+        inset 0 0 20px rgba(138, 43, 226, 0.1);
     }
-    100% {
-      transform: translateX(100%);
+    50% { 
+      box-shadow: 
+        0 0 40px rgba(0, 255, 255, 0.8),
+        0 0 80px rgba(255, 0, 255, 0.6),
+        inset 0 0 40px rgba(138, 43, 226, 0.3);
     }
+  }
+
+  @keyframes divine-border-sweep {
+    0% { transform: translateX(-100%) skewX(-45deg); }
+    100% { transform: translateX(200%) skewX(-45deg); }
+  }
+
+  @keyframes divine-text-glow {
+    0%, 100% { 
+      text-shadow: 
+        0 0 10px rgba(0, 255, 255, 0.8),
+        0 0 20px rgba(255, 0, 255, 0.6),
+        0 0 30px rgba(138, 43, 226, 0.4);
+    }
+    50% { 
+      text-shadow: 
+        0 0 20px rgba(0, 255, 255, 1),
+        0 0 40px rgba(255, 0, 255, 0.8),
+        0 0 60px rgba(138, 43, 226, 0.6);
+    }
+  }
+
+  @keyframes divine-gradient-shift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  @keyframes divine-card-float {
+    0%, 100% { transform: translateY(0px) rotateX(0deg); }
+    50% { transform: translateY(-10px) rotateX(2deg); }
+  }
+
+  @keyframes divine-glow-pulse {
+    0%, 100% { box-shadow: 0 0 10px rgba(0, 255, 255, 0.5); }
+    50% { box-shadow: 0 0 20px rgba(255, 0, 255, 0.8); }
+  }
+
+  @keyframes divine-button-pulse {
+    0% { transform: scale(1.05); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1.05); }
+  }
+
+  @keyframes divine-button-shine {
+    0% { transform: translateX(-100%) skewX(-45deg); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: translateX(200%) skewX(-45deg); opacity: 0; }
+  }
+
+  @keyframes divine-input-glow {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+  }
+
+  @keyframes divine-ripple {
+    0% { transform: scale(0); opacity: 1; }
+    100% { transform: scale(2); opacity: 0; }
   }
 }
 
-/* CSS Variables */
+/* CSS Variables for Divine Effects */
 :root {
-  --cyber-grid-bg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpath d='M0 0h100v100H0z' fill='%23121212'/%3E%3Cpath d='M0 0h1v100H0zm25 0h1v100h-1zm25 0h1v100h-1zm25 0h1v100h-1zm24 0h1v100h-1zM0 0v1h100V0zm0 25v1h100v-1zm0 25v1h100v-1zm0 25v1h100v-1zm0 24v1h100v-1z' fill='%231e4d5c' opacity='.3'/%3E%3C/svg%3E");
+  --divine-particles: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 50 50'%3E%3Ccircle cx='25' cy='25' r='1' fill='%2300ffff' opacity='0.3'/%3E%3Ccircle cx='10' cy='10' r='0.5' fill='%23ff00ff' opacity='0.5'/%3E%3Ccircle cx='40' cy='15' r='0.8' fill='%238a2be2' opacity='0.4'/%3E%3Ccircle cx='5' cy='40' r='0.6' fill='%2300ffff' opacity='0.6'/%3E%3Ccircle cx='35' cy='35' r='0.4' fill='%23ff00ff' opacity='0.7'/%3E%3C/svg%3E");
+}
+
+/* Additional Divine Classes */
+.divine-shimmer {
+  background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.1) 50%, transparent 70%);
+  background-size: 200% 200%;
+  animation: divine-shimmer 3s ease-in-out infinite;
+}
+
+@keyframes divine-shimmer {
+  0% { background-position: -200% -200%; }
+  50% { background-position: 200% 200%; }
+  100% { background-position: -200% -200%; }
+}
+
+.divine-glow-text {
+  animation: divine-text-glow 4s ease-in-out infinite;
+}
+
+.divine-float {
+  animation: divine-card-float 6s ease-in-out infinite;
+}
+
+/* Enhanced spacing and divine layout */
+.divine-spacing {
+  @apply space-y-8 md:space-y-12 lg:space-y-16;
+}
+
+.divine-container {
+  @apply container mx-auto px-6 md:px-8 lg:px-12;
+}
+
+.divine-section {
+  @apply py-16 md:py-24 lg:py-32 relative overflow-hidden;
 }
