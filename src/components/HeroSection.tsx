@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 const HeroSection: React.FC = () => {
   return (
-    <div className="relative min-h-[90vh] flex flex-col items-center justify-center pt-24 overflow-hidden">
+    <div className="relative min-h-[90vh] flex flex-col items-center justify-center pt-32 overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute top-1/2 left-1/4 w-64 h-64 bg-cyber-neon-cyan/5 rounded-full filter blur-[100px] animate-float"></div>
