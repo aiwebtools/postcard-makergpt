@@ -43,43 +43,48 @@ const Header: React.FC = () => {
               size="sm"
               className="text-white hover:text-cyber-neon-cyan hover:bg-cyber-neon-blue/10 transition-colors font-medium"
               onClick={() => window.open("https://chatgpt.com/g/g-6814dcbdbc548191ad602de22e072917-postcard-maker-gpt", "_blank")}
+              aria-label="Use AI Web Tools Postcard Maker GPT"
             >
               <MessageSquare className="mr-2 h-4 w-4" />
-              USE Postcard Maker GPT
+              USE AI Postcard Maker
             </Button>
             <Button
               variant="ghost"
               size="sm" 
               className="text-white hover:text-cyber-neon-cyan hover:bg-cyber-neon-blue/10 transition-colors font-medium"
               onClick={() => document.getElementById('faq')?.scrollIntoView({behavior: 'smooth'})}
+              aria-label="AI Tools FAQ"
             >
               <HelpCircle className="mr-2 h-4 w-4" />
-              FAQ
+              AI Tools FAQ
             </Button>
             <Button
               variant="ghost"
               size="sm"
               className="text-white hover:text-cyber-neon-cyan hover:bg-cyber-neon-blue/10 transition-colors font-medium"
               onClick={() => document.getElementById('disclaimer')?.scrollIntoView({behavior: 'smooth'})}
+              aria-label="AI Web Tools Disclaimer"
             >
               <Shield className="mr-2 h-4 w-4" />
-              Disclaimer
+              AI Tools Info
             </Button>
             <Button
               variant="ghost"
               size="sm"
               className="text-white hover:text-cyber-neon-cyan hover:bg-cyber-neon-blue/10 transition-colors font-medium"
               onClick={() => window.open("https://www.aiwebtools.ai", "_blank")}
+              aria-label="Explore all AI Web Tools at AIWEBTOOLS.AI"
             >
               <Wrench className="mr-2 h-4 w-4" />
-              More AI Tools
+              All AI Web Tools
             </Button>
             <Button 
               size="sm"
               className="ml-2 cyber-button bg-gradient-to-r from-cyber-neon-blue to-cyber-neon-cyan border-none text-white hover:text-white"
               onClick={() => window.open("https://chatgpt.com/g/g-6814dcbdbc548191ad602de22e072917-postcard-maker-gpt", "_blank")}
+              aria-label="Try AI Web Tools now"
             >
-              Try Now
+              Try AI Tools
             </Button>
           </nav>
 
@@ -87,6 +92,7 @@ const Header: React.FC = () => {
           <button
             className="md:hidden text-white"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle mobile menu"
           >
             {isMobileMenuOpen ? <X /> : <Menu />}
           </button>

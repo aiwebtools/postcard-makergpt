@@ -1,0 +1,16 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://postcard-maker-gpt.com/</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=1200&h=630</image:loc>
+      <image:title>AI Web Tools - Postcard Maker GPT</image:title>
+      <image:caption>AIWEBTOOLS.AI - Professional AI-powered postcard design tools</image:caption>
+    </image:image>
+  </url>
+</urlset>

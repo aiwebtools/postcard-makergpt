@@ -19,7 +19,9 @@ const Logo: React.FC<LogoProps> = ({ className = "" }) => {
         <h1 className="font-cyber text-lg font-bold text-white leading-tight">
           Postcard Maker <span className="text-cyber-neon-cyan">GPT</span>
         </h1>
-        <p className="text-cyber-text-muted text-[10px] leading-none">Presented by AiWebTools.Ai</p>
+        <p className="text-cyber-text-muted text-[10px] leading-none">
+          By <span className="text-cyber-neon-cyan">AIWEBTOOLS.AI</span> - Premium AI Web Tools
+        </p>
       </div>
     </div>
   );

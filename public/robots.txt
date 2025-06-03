@@ -1,8 +1,11 @@
+
 User-agent: Googlebot
 Allow: /
+Crawl-delay: 1
 
 User-agent: Bingbot
 Allow: /
+Crawl-delay: 1
 
 User-agent: Twitterbot
 Allow: /
@@ -12,3 +15,9 @@ Allow: /
 
 User-agent: *
 Allow: /
+Crawl-delay: 2
+
+Sitemap: https://postcard-maker-gpt.com/sitemap.xml
+
+# AI Web Tools - AIWEBTOOLS.AI
+# Premium AI tools for marketing and design automation

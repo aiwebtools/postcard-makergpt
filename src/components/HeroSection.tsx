@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Button } from "@/components/ui/button";
 
@@ -16,16 +17,16 @@ const HeroSection: React.FC = () => {
           <div className="lg:w-1/2 space-y-6">
             <div className="space-y-2">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-cyber font-bold leading-tight">
-                <span className="text-cyber-neon-cyan animate-glow">Postcard Maker</span>{" "}
-                <span className="text-white">GPT</span>
+                <span className="text-cyber-neon-cyan animate-glow">AI Web Tools</span>{" "}
+                <span className="text-white">Postcard Maker GPT</span>
               </h1>
               <h2 className="text-xl md:text-2xl font-cyber text-cyber-text-secondary">
-                CREATE READY TO MAIL POSTCARD DESIGNS WITH THE POWER OF AI
+                #1 AI TOOLS FOR MARKETING - CREATE READY TO MAIL POSTCARD DESIGNS
               </h2>
             </div>
             
             <p className="text-cyber-text-secondary max-w-lg">
-              Generate hyperrealistic, print-ready promotional postcards instantly. Our AI creates perfect 16:9 aspect ratio images for both front and back sides, following precise layout rules for professional marketing materials.
+              AIWEBTOOLS.AI presents the most advanced AI-powered postcard maker. Generate hyperrealistic, print-ready promotional postcards instantly with our professional AI web tools. Perfect 16:9 aspect ratio images for both front and back sides, following precise layout rules for marketing success.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
@@ -34,7 +35,7 @@ const HeroSection: React.FC = () => {
                 className="cyber-button border-cyber-neon-cyan text-cyber-neon-cyan hover:text-white"
                 onClick={() => window.open("https://chatgpt.com/g/g-6814dcbdbc548191ad602de22e072917-postcard-maker-gpt", "_blank")}
               >
-                Try Now Free
+                Try AI Tools Free
               </Button>
               <Button 
                 variant="outline" 
@@ -42,12 +43,12 @@ const HeroSection: React.FC = () => {
                 className="cyber-button border-cyber-neon-purple text-cyber-neon-purple hover:text-white"
                 onClick={() => document.getElementById("how-it-works")?.scrollIntoView({ behavior: "smooth" })}
               >
-                Learn How It Works
+                See How AI Works
               </Button>
             </div>
             
             <div className="pt-4 text-cyber-text-muted text-sm">
-              No login required. Powered by OpenAI's GPT technology.
+              <strong>Free AI Web Tools</strong> - No login required. Powered by OpenAI's GPT technology and AIWEBTOOLS.AI innovation.
             </div>
           </div>
           
