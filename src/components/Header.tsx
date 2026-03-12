@@ -72,7 +72,7 @@ const Header: React.FC = () => {
               variant="ghost"
               size="sm"
               className="text-white hover:text-cyber-neon-cyan hover:bg-cyber-neon-blue/10 transition-colors font-medium"
-              onClick={() => window.open("https://www.aiwebtools.ai", "_blank")}
+              onClick={() => window.open("https://aiwebtools.lovable.app/?via=aiwebtools", "_blank")}
               aria-label="Explore all AI Web Tools at AIWEBTOOLS.AI"
             >
               <Wrench className="mr-2 h-4 w-4" />
