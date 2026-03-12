@@ -106,7 +106,7 @@ const Footer: React.FC = () => {
           <div className="flex items-center gap-6">
             <Button 
               className="rounded-full bg-gradient-to-r from-cyber-neon-cyan to-cyber-neon-magenta hover:from-cyber-neon-magenta hover:to-cyber-neon-cyan transition-all p-0 h-10 w-40"
-              onClick={() => window.open("https://www.aiwebtools.ai", "_blank")}
+              onClick={() => window.open("https://aiwebtools.lovable.app/?via=aiwebtools", "_blank")}
               aria-label="Visit AIWEBTOOLS.AI for premium AI web tools"
             >
               <span className="text-black font-medium">Premium AI Tools</span>
