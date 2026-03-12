@@ -80,7 +80,7 @@ const Footer: React.FC = () => {
               USE AI Postcard Maker
             </Button>
             <a 
-              href="https://www.aiwebtools.ai" 
+              href="https://aiwebtools.lovable.app/?via=aiwebtools" 
               target="_blank" 
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-cyber-neon-cyan hover:text-cyber-neon-purple transition-colors mt-6"
