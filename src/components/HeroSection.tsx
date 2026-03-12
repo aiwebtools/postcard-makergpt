@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 const HeroSection: React.FC = () => {
   return (
-    <div className="relative min-h-[90vh] flex flex-col items-center justify-center pt-32 overflow-hidden">
+    <div className="relative min-h-[90vh] flex flex-col items-center justify-center pt-24 sm:pt-28 md:pt-32 pb-8 overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute top-1/2 left-1/4 w-64 h-64 bg-cyber-neon-cyan/5 rounded-full filter blur-[100px] animate-float"></div>
@@ -16,7 +16,7 @@ const HeroSection: React.FC = () => {
         <div className="flex flex-col lg:flex-row items-center gap-12">
           <div className="lg:w-1/2 space-y-6">
             <div className="space-y-2">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-cyber font-bold leading-tight">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-cyber font-bold leading-tight">
                 <span className="text-cyber-neon-cyan animate-glow">AI Web Tools</span>{" "}
                 <span className="text-white">Postcard Maker GPT</span>
               </h1>

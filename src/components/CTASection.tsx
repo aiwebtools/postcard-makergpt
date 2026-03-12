@@ -34,7 +34,7 @@ const CTASection: React.FC = () => {
               variant="outline" 
               size="lg"
               className="cyber-button border-cyber-neon-purple text-cyber-neon-purple hover:text-white"
-              onClick={() => window.open("https://www.aiwebtools.ai", "_blank")}
+              onClick={() => window.open("https://aiwebtools.lovable.app/?via=aiwebtools", "_blank")}
             >
               Explore More AI Tools
             </Button>
