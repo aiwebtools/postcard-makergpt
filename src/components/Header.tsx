@@ -138,7 +138,7 @@ const Header: React.FC = () => {
               variant="ghost"
               className="justify-start text-white hover:text-cyber-neon-cyan hover:bg-cyber-neon-blue/10"
               onClick={() => {
-                window.open("https://www.aiwebtools.ai", "_blank");
+                window.open("https://aiwebtools.lovable.app/?via=aiwebtools", "_blank");
                 setIsMobileMenuOpen(false);
               }}
             >
