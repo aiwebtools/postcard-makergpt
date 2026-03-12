@@ -16,7 +16,7 @@ const HeroSection: React.FC = () => {
         <div className="flex flex-col lg:flex-row items-center gap-12">
           <div className="lg:w-1/2 space-y-6">
             <div className="space-y-2">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-cyber font-bold leading-tight">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-cyber font-bold leading-tight">
                 <span className="text-cyber-neon-cyan animate-glow">AI Web Tools</span>{" "}
                 <span className="text-white">Postcard Maker GPT</span>
               </h1>
